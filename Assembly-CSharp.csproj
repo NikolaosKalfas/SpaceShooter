@@ -64,6 +64,8 @@
     <Compile Include="Assets\Scripts\Powerup.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Asteroid.cs" />
+    <Compile Include="Assets\Scripts\Explosion.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
