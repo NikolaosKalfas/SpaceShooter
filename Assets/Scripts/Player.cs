@@ -18,11 +18,16 @@ public class Player : MonoBehaviour
     [SerializeField]
     private int _lives = 3;
     private Spawn_Manager _spawnManager;
+
     private bool _isTripleShotActive = false;
     private bool _isSpeedBoostActive = false;
     private bool _isShieldsActive = false;
+
     [SerializeField]
     private GameObject _shieldVisualizer;
+    [SerializeField]
+    private GameObject _leftEngine, _rightEngine;
+
     [SerializeField]
     private int _score;
 
@@ -107,6 +112,15 @@ public class Player : MonoBehaviour
         }
 
         _lives -= 1;
+
+        if (_lives == 2)
+        {
+            _leftEngine.SetActive(true);
+        }
+        else if (_lives == 1)
+        {
+            _rightEngine.SetActive(true);
+        }
 
         _uiManager.UpdateLives(_lives);
 
